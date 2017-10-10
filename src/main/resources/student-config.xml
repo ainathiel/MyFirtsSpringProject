@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="student" class="com.privalia.entity.Student">
+	<property name="idStudent" value="1234"></property>
+	<property name="name" value="Fernando"></property>
+	<property name="surname" value="Alonso"></property>
+	<property name="age" value="22"></property>
+	<property name="address" ref="address"></property>
+</bean>
+
+<bean id="studentConst" class="com.privalia.entity.Student">
+	<constructor-arg index="0" value="111" type="java.lang.Integer"></constructor-arg>
+	<constructor-arg index="1" value="Michael" type="java.lang.String"></constructor-arg>
+	<constructor-arg index="2" value="Shumacher" type="java.lang.String"></constructor-arg>
+	<constructor-arg index="3" value="23" type="java.lang.Integer"></constructor-arg>
+	<constructor-arg index="4" ref="address" type="com.privalia.entity.Address"></constructor-arg>
+</bean>
+
+<bean id="address" class="com.privalia.entity.Address">
+	<property name="street" value="Industria"></property>
+	<property name="city" value="Alicante"></property>
+	<property name="town" value="Valencia"></property>
+</bean>
+</beans>

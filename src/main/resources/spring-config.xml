@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="helloWorld" class="com.privalia.presentation.HelloWorld">
+	<property name="hello" value="Hola Mundo! Por setters"></property>
+</bean>
+
+<bean id="helloWorldConst" class="com.privalia.presentation.HelloWorld">
+	<constructor-arg index="0" value="Hola Mundo From Constructor!" type="java.lang.String"></constructor-arg>
+</bean>
+
+</beans>
